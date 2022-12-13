@@ -1,0 +1,201 @@
+/* CSS RESET */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ROOT STYLES */
+
+:root {
+    /* Colors */
+    --clr-primary-400: hsl(218, 44%, 22%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(212, 45%, 89%);
+    --clr-neutral-400: hsl(220, 15%, 55%);
+
+    /* Fonts */
+    /* Font Family */
+
+    --ff-primary: 'Outfit', sans-serif;
+
+    /* Font Weights */
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    /* Font Sizes */
+
+    --fs-regular: 0.938rem;
+    --fs-large: 1.25rem;
+    --fs-xlarge: 1.5rem;
+}
+
+
+/* Utility Classes */
+
+/* Colors */
+
+.clr-primary-400 {
+    color: var(--clr-primary-400);
+}
+.clr-neutral-100 {
+    color: var(--clr-neutral-100);
+}
+.clr-neutral-200 {
+    color: var(--clr-neutral-200);
+}
+.clr-neutral-400 {
+    color: var(--clr-neutral-400);
+}
+
+/* BG colors */
+
+.bg-primary-400 {
+    background-color: var(--clr-primary-400);
+}
+.bg-neutral-100 {
+    background-color: var(--clr-neutral-100);
+}
+.bg-neutral-200 {
+    background-color: var(--clr-neutral-200);
+}
+.bg-neutral-400 {
+    background-color: var(--clr-neutral-400);
+}
+
+/* Font Sizes */
+
+.fs-regular {
+    font-size: var(--fs-regular);
+}
+.fs-large {
+    font-size: var(--fs-large);
+}
+.fs-xlarge {
+    font-size: var(--fs-xlarge);
+}
+
+/* Font Weights */
+
+.fw-regular {
+    font-weight: var(--fw-regular);
+}
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
+
+
+
+/* GENERAL STYLINGS */
+
+body {
+    font-family: var(--ff-primary);
+    background-color: var(--clr-neutral-200);
+}
+
+
+/* Component Styles */
+
+
+.component {
+    display: grid;
+    margin: 1rem;
+    background-color: var(--clr-neutral-100);
+    border-radius: 1rem;
+    overflow: hidden;
+    max-width: 375px;
+}
+
+.component__content {
+    text-align: center;
+    display: grid;
+    gap: 1rem;
+    padding: 1.25rem;
+}
+
+.component__text {
+    padding: 0 1rem;
+}
+
+/* Media Query: Margin/Padding for mobile size */
+
+@media (min-width: 400px) {
+    .component {
+        margin: 1rem auto;
+    }
+
+    .component__text {
+        padding: 1.25rem;
+    }
+}
